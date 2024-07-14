@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Styling landing page starts here */
+.background-image-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../images/img_girl.jpg');
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar-container,
+.background-image-text-container,
+.bouncing-button-container,
+.footer-container {
+  margin: 0 100px;
+}
+
+.nav-bar-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 10px 0;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.menu-container ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 500px;
+}
+
+.menu-container ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.menu-container ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.menu-container ul li a:hover::after {
+  width: 100%;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: white;
+  font-family: Arsenal SC, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+/* .menu-container ul li a.active-link {
+  border-bottom: 2px solid white;
+  transition: border-bottom 0.4s ease-in-out;
+} */
+
+.background-image-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.background-image-text-container p,
+.background-image-text-container i {
+  color: white;
+}
+
+.background-image-text-container p {
+  margin: 8px 0;
+}
+
+.welcome-text {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.introduction-text {
+  font-weight: 400;
+  font-size: 70px;
+}
+
+.type-text {
+  font-weight: 600;
+}
+
+.type-text:last-of-type {
+  animation: type 0.33s infinite;
+}
+
+@keyframes type {
+  to {
+    opacity: 0;
+  }
+}
+
+.social-media-icons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 30px 0 40px 0;
+}
+
+.social-media-icons-container a {
+  font-size: 1em;
+}
+
+.download-cv-button,
+.bouncing-button-container button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.download-cv-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  padding: 15px 25px;
+  font-size: 15px;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.5s;
+}
+
+.download-cv-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.download-cv-button:active,
+.half-image-container button:active {
+  opacity: 0.8;
+}
+
+.bouncing-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.bouncing-button-container button {
+  border-radius: 20px;
+  padding: 30px 10px 5px 10px;
+  animation: bounce-button 2s infinite;
+}
+
+@keyframes bounce-button {
+  0% {
+    transform: translate(0px, 5px);
+  }
+
+  30% {
+    transform: translate(0px, 10px);
+  }
+
+  75% {
+    transform: translate(0px, -20px);
+  }
+
+  100% {
+    transform: translate(0px, 5px);
+  }
+}
+
+.bouncing-button-container .fa-less-than {
+  rotate: -90deg;
+  font-size: 15px;
+}
+
+.menu-container ul li a,
+.logo-text a {
+  transition: color 0.4s ease-in-out;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.nav-bar.scrolled {
+  background-color: white;
+}
+
+.nav-bar.scrolled .menu-container ul li a,
+.nav-bar.scrolled .logo-container .logo-text a {
+  color: black;
+}
+
+.nav-bar.scrolled .menu-container ul li a::after {
+  background-color: black;
+}
+
+.nav-bar.scrolled .menu-container ul li a.active-link {
+  border-bottom: 2px solid black;
+}
+/* Styling landing page ends here */
+
+/* Styling about page starts here */
+.about-page-container,
+.projects-page-container,
+.education-page-container,
+.half-image-container,
+.contact-page-container,
+.contact-directory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.description-container,
+.works-container,
+.projects-page-container,
+.education-page-container,
+.contact-page-container {
+  text-align: center;
+}
+
+.description-container,
+.works-container,
+.projects-page-description,
+.education-page-description,
+.contact-page-description {
+  line-height: 25px;
+  width: 550px;
+  margin-bottom: 70px;
+}
+
+.header-text {
+  color: #212529;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.bold-text {
+  color: black;
+  font-weight: 600;
+}
+
+.fa-asterisk {
+  font-size: 20px;
+}
+
+.par-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.my-picture-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+  border: 5px solid gray;
+  margin-bottom: 30px;
+}
+
+.works-container,
+.languages-container,
+.contact-forms-container {
+  width: 820px;
+  margin-bottom: 50px;
+}
+
+.works-container h2 {
+  margin-bottom: 20px;
+}
+
+.works-container .works-title {
+  font-size: 19px;
+  color: #212529bf;
+  font-weight: 500;
+}
+
+.languages-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.languages-container .language {
+  text-align: center;
+}
+
+.languages-container i {
+  font-size: 80px;
+}
+/* Styling about page ends here */
+
+/* Styling projects page starts here */
+.projects-page-container,
+.contact-page-container {
+  background-color: #f8f9fa;
+}
+
+.projects-compilation-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-container {
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+  position: relative;
+}
+
+.project-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.project-container:hover .overlay {
+  opacity: 1;
+}
+
+.project-container .text,
+.project-container .click-button {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-container .click-button {
+  top: 55%;
+  background-color: rgb(40, 40, 40);
+  font-size: 15px;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Styling projects page ends here */
+
+/* Styling education page starts here */
+.education-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.education-list-container .education-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border: 1px solid #d2d3d4;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px 30px;
+  line-height: 25px;
+}
+
+.education-list-container .text-year {
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.education-list-container .text-header {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.education-list-container .text-content {
+  font-size: 14px;
+  color: #212529;
+}
+/* Styling education page ends here */
+
+/* Styling half image background starts here */
+.half-image-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../images/mountain.jpg');
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+}
+
+.half-image-container h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.half-image-container button {
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  border: 2px solid white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.half-image-container button:hover {
+  background-color: white;
+  color: black;
+}
+/* Styling half image background ends here */
+
+/* Styling Contact Page starts here */
+.contact-directory p {
+  font-family: Nunito, sans-serif;
+}
+
+.contact-directory {
+  padding: 0;
+}
+
+.contact-directory-container a {
+  text-decoration: none;
+}
+
+.contact-directory i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #9ba5ae;
+}
+
+.contact-directory .directory-number {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.contact-directory .directory-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+/* Styling Contact Page ends here */
+
+/* Styling Footer Page starts here */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.footer-container p {
+  font-family: Nunito, sans-serif;
+  flex: 1;
+}
+
+.footer-container p,
+.footer-container .footer-icons a {
+  color: #212529bf;
+  transition: color 0.4s;
+}
+
+.footer-container .footer-icons a:hover {
+  color: black;
+}
+
+.footer-container .footer-icons {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-icons i {
+  border: 2px solid #9ba5ae;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.footer-icons .fa-facebook-f {
+  padding-left: 14px;
+  padding-right: 13px;
+}
+/* Styling Footer Page ends here */
+
+/* For Responsive Design */
+
+@media screen and (max-width: 600px) {
+}
+
+/* For Responsive Design */
